@@ -83,16 +83,16 @@ class="close" title="Close Modal">&times;</span>
 class="close" title="Close Modal">&times;</span>
 
   <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate">
     <div class="imgcontainer">
     </div>
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="uname" required id="uname">
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="pss"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pss" required id="pss">
 	  
 	  <!--Button for google signup-->
 	  <div class="btn white darken-4 col s10 m4">
@@ -100,7 +100,7 @@ class="close" title="Close Modal">&times;</span>
          <div class="left">
              <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
          </div>
-           Login with Google
+           signup with Google
      </a>
 		</div>
 		
@@ -125,9 +125,9 @@ class="close" title="Close Modal">&times;</span>
 
 function savedata()
 {
-car xmlhttp;
+var xmlhttp;
 xmlhttp=new XMLHttpRequest();
-xmlhttp.open("GET","insert.php?nm="+document.getElementById("id02").value+"&ct="+document.getElementById("id02").value,false);
+xmlhttp.open("GET","insert.php?nm="+document.getElementById("uname").value+"&ct="+document.getElementById("pss").value,true);
 xmlhttp.send(null);
 }
 

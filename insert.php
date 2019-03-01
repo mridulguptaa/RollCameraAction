@@ -8,11 +8,11 @@
 <?php
 
 $nm=$_GET["nm"];
-$pw=$_GET["pw"];
+$ct=$_GET["ct"];
 
-mysql_connect("localhost","root","");
+mysql_connect("localhost:3306","id8835122_mridul","qwerty");
 mysql_select_db("id8835122_credentials");
-mysql_query("insert into Login values('$nm','$pw')");
+mysql_query("insert into Login values('$nm','$ct')");
 
 ?>
 

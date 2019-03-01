@@ -343,7 +343,7 @@ a{
   font-weight: bold;
 }
 
-/* Close button on hover */
+/* Close button on hover *//
 .close:hover,
 .close:focus {
   color: red;
