@@ -49,18 +49,19 @@
 class="close" title="Close Modal">&times;</span>
 
   <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" action="logincheck.php" method="POST">
+  
     <div class="imgcontainer">
     </div>
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="lname" >
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="lpass">
 
-      <button type="submit">Login</button>
+      <button type="submit" onclick="checkdata()">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -122,6 +123,20 @@ class="close" title="Close Modal">&times;</span>
 
 
 <script type="text/javascript">
+var ans;
+
+function checkdata()
+{
+var xmlhttp2;
+xmlhttp2=new XMLHttpRequest();
+ans=xmlhttp2.open("GET","check.php?nm="+document.getElementById("lname").value+"&ct="+document.getElementById("lpass").value,true);
+window.prompt("in function");
+return ans;
+
+	xmlhttp2.send(null);
+}
+
+checkdata();
 
 function savedata()
 {
