@@ -1,0 +1,277 @@
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico.jpg" type="image/png">
+<title>RollCameraAction</title>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/css/all.css"></script>
+        
+
+<link rel="stylesheet" type="text/css" href="ssRCA.css">
+
+</head>
+    
+    
+<body bgcolor="black" text="white">
+
+
+<audio src="soothing music.mp3" autoplay="true"></audio>
+    <header>
+        <div class="top">
+            <div class="more">
+                <a href="">
+                    <img src="icons/3%20dot%20button.gif" width=50px height=50px>
+                </a>
+            </div>
+            
+            <div>
+                <ul class="main-nav">
+						<li><button onclick="document.getElementById('id01').style.display='block'" class="button">Login</button>
+						<li><button onclick="document.getElementById('id02').style.display='block'" class="button">SignUp</button>
+
+
+                </ul>
+            </div>
+            <div class="RollCameraAction">
+                <b>Roll<div class="orange">Camera!!</div>Action..</b>
+            </div>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+<!-- Button to open the modal login form -->
+
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="logincheck.php" method="POST">
+  
+    <div class="imgcontainer">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="lname" >
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="lpass">
+
+      <button type="submit" onclick="checkdata()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <span class="psw">Forgot <a href="#">password?</a></span>
+	  <br><br>
+	        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+    </div>
+  </form>
+</div>
+
+<!-- Button to open the modal signup fform-->
+
+<!-- The Modal -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required id="uname">
+
+      <label for="pss"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pss" required id="pss">
+	  
+	  <!--Button for google signup-->
+	  <div class="btn white darken-4 col s10 m4">
+     <a href="/users/google-oauth/" style="text-transform:none">
+         <div class="left">
+             <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+         </div>
+           signup with Google
+     </a>
+		</div>
+		
+		
+     <button type="submit" onclick="savedata()">Signup</button> 
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+	  <br><br>
+	        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+
+    </div>
+  </form>
+</div>
+
+<!--testing connecting to db-->
+
+
+
+<script type="text/javascript">
+var ans;
+
+function checkdata()
+{
+var xmlhttp2;
+xmlhttp2=new XMLHttpRequest();
+ans=xmlhttp2.open("GET","check.php?nm="+document.getElementById("lname").value+"&ct="+document.getElementById("lpass").value,true);
+window.prompt("in function");
+return ans;
+
+	xmlhttp2.send(null);
+}
+
+checkdata();
+
+function savedata()
+{
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET","insert.php?nm="+document.getElementById("uname").value+"&ct="+document.getElementById("pss").value,true);
+xmlhttp.send(null);
+}
+
+</script>
+
+
+
+
+	
+    <! Making search box>
+    <div class="searechbox">
+        <input  class="searchbox"type="text" placeholder="type to search"> 
+        <a class="search-btn" href="">
+        <i class="fas fa-search"></i>
+        
+        </a>
+    
+    
+    </div>
+    
+    <! Making 3D image gallery>
+    <section class="slideshow">
+        <div class="content">
+            <div class="content-carrousel">
+                <figure class="shadow"> <a href="Page2.html"><img src="raazi.jpg"></a> </figure>
+                <figure class="shadow"> <a href="fault.html"><img src="fault.jpg"></a> </figure>
+                <figure class="shadow">  <a href="deathnote.html"><img src="deathnote.jpg"></a></figure>
+                <figure class="shadow"> <a href="secret.html"><img src="secret.jpg"></a> </figure>
+                <figure class="shadow"> <a href="girlstrip.html"><img src="girl.jpg"></a>  </figure>
+                <figure class="shadow">  <a href="stranger.html"><img src="stranger.jpg"></a>  </figure>
+                <figure class="shadow"> <a href="suidhaga.html"><img src="Suidhagga.jpg"></a>  </figure>
+                <figure class="shadow"> <a href="heartbreakkid.html"><img src="heartbreak.jpg"></a>  </figure>
+                <figure class="shadow">  <a href="highlander.html"><img src="high.jpg"></a>  </figure>
+
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <ul class="main-nav2">
+        <li><a href=""><b><div class="plus">+ </div>BOLLYWOOD</b></a></li><br>
+            <div class="gallery">
+                    <a href="secret.html" >
+                        <img src="Secret.jpg" width=250 height=350 >
+                        
+                    </a>
+                
+            </div>
+            <div class="gallery">
+                   
+                <a href="gold.html">
+                        <img src="Gold.jpg" width=250 height=350>
+                    </a>
+                </div>
+            <div class="gallery">
+                    <a href="yamlapgla.html">
+                        <img src="yamla.jpg" width=250 height=350>
+                    </a>
+                </div>
+            <div class="gallery">
+                    <a href="suidhaga.html">
+                        <img src="Suidhagga.jpg" width=250px height=350px>
+                    </a>
+                </div>
+        <br><br><br><br><br>         
+        <br><br><br><br><br> 
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+
+    <li><a href=""><b><div class="plus">+ </div>HOLLYWOOD</a></b></li><br>
+    <div class="gallery">
+                    <a href="Avengers.html" >
+                        <img src="Avenger.jpg" width=250 height=350 >
+                        
+                    </a>
+                
+            </div>
+            <div class="gallery">
+                   
+                <a href="heartbreakkid.html">
+                        <img src="heartbreak.jpg" width=250 height=350>
+                    </a>
+                </div>
+            <div class="gallery">
+                    <a href="highlander.html">
+                        <img src="high.jpg" width=250 height=350>
+                    </a>
+                </div>
+            <div class="gallery">
+                    <a href="girlstrip.html">
+                        <img src="girl.jpg" width=250px height=350px>
+                    </a>
+                </div>
+        <br><br><br><br><br>         
+        <br><br><br><br><br> 
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+
+    <li><a href=""><b><div class="plus">+ </div>TV SERIES</a></b></li><br>
+        <div class="gallery">
+                    <a href="prison.html" >
+                        <img src="prison.jpg" width=250 height=350 >
+                        
+                    </a>
+                
+            </div>
+            <div class="gallery">
+                   
+                <a href="killjoy.html">
+                        <img src="killjoy.jpg" width=250 height=350>
+                    </a>
+                </div>
+            <div class="gallery">
+                    <a href="stranger.html">
+                        <img src="stranger.jpg" width=250 height=350>
+                    </a>
+                </div>
+            <div class="gallery">
+                    <a href="catlerock">
+                        <img src="castle.jpg" width=250px height=350px>
+                    </a>
+                </div>
+
+    
+    </ul>
+
+
+</body>
+</html>
